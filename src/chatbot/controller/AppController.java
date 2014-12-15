@@ -8,15 +8,15 @@ import chatbot.model.Bot;
 public class AppController
 {
 	
-	
+	//What starts messages
 	private String startMessage;
-
+    //Viewing inside the window box
 	private ChatbotView View;
-	
+	//The boarders of how much your viewing
 	private ChatbotFrame Frame;
 
 	private Bot mytalkingChatBot;
-	
+
 	private String quitMessage;
 
 
@@ -55,6 +55,7 @@ public class AppController
 		return result;
 	}
 
+	//Exits out of program
 	private void quit()
 	{
 		View.showChatbotMessage(quitMessage);

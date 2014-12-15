@@ -25,7 +25,7 @@ public class ChatbotPanel extends JPanel
 	private JTextArea chatArea;
 	private JScrollPane chatPane;
 	
-	// buttons, textbox, ect
+	// buttons textbox
 	public ChatbotPanel(AppController baseController)
 	{
 		this.baseController = baseController;

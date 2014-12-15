@@ -31,13 +31,13 @@ public class Bot
 
 	}
 
-	
+	// Name - uses what the user sets as the name
 	public String getName()
 	{
 		return name;
 	}
 
-	
+	// Count - count how much is typed
 	public int getChatCount()
 	{
 		return chatCount;
@@ -60,7 +60,7 @@ public class Bot
 		this.name = name;
 	}
 
-	
+	// MemeList - is a set of words that brings diff reactions
 	private void fillTheMemeList()
 	{
 		memeList.add("Alone");
@@ -95,7 +95,7 @@ public class Bot
 		return result;
 	}
 
-	//questions
+	//questions about the user, and reacts as if it's learning about you
 	private String introduceUser(String input)
 	{
 		String userQuestion = "";
