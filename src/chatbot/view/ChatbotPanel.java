@@ -13,7 +13,7 @@ public class ChatbotPanel extends JPanel
 {
 
 	/**
-	 * 
+	 * The layout of the frame (what's in it)
 	 */
 	private static final long serialVersionUID = 1L;
 
@@ -25,7 +25,10 @@ public class ChatbotPanel extends JPanel
 	private JTextArea chatArea;
 	private JScrollPane chatPane;
 	
-	// buttons textbox
+	/**
+	 *  buttons textbox
+	 * @param baseController
+	 */
 	public ChatbotPanel(AppController baseController)
 	{
 		this.baseController = baseController;
@@ -59,7 +62,9 @@ public class ChatbotPanel extends JPanel
 		this.add(chatPane);
 	}
 	
-	//positioning 
+	/**
+	 * button and textbox positioning 
+	 */
 	private void setupLayout()
 	{
 		baseLayout.putConstraint(SpringLayout.WEST, chatPane, 50, SpringLayout.WEST, this);

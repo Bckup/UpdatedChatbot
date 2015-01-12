@@ -18,7 +18,6 @@ public class Bot
 	
 	private ArrayList<String> userInputList;
 
-	
 	public Bot(String name)
 	{
 		memeList = new ArrayList<String>();
@@ -31,19 +30,24 @@ public class Bot
 
 	}
 
-	// Name - uses what the user sets as the name
+	/**
+	 *  Name - uses what the user sets as the name
+	 * @return
+	 */
 	public String getName()
 	{
 		return name;
 	}
 
-	// Count - count how much is typed
+	/**
+	 *  Count - count how much is typed
+	 * @return
+	 */
 	public int getChatCount()
 	{
 		return chatCount;
 	}
 
-	
 	public ChatbotUser getMyUser()
 	{
 		return myUser;
@@ -54,13 +58,14 @@ public class Bot
 		this.myUser = myUser;
 	}
 
-
 	public void setName(String name)
 	{
 		this.name = name;
 	}
 
-	// MemeList - is a set of words that brings diff reactions
+	/**
+	 *  MemeList - is a set of words that brings different reactions
+	 */
 	private void fillTheMemeList()
 	{
 		memeList.add("Alone");
@@ -73,7 +78,6 @@ public class Bot
 		memeList.add("hahaha");
 	}
 
-	
 	public String processText(String currentInput)
 	{
 		String result = "";
@@ -95,7 +99,11 @@ public class Bot
 		return result;
 	}
 
-	//questions about the user, and reacts as if it's learning about you
+	/**
+	 * questions about the user, and reacts as if it's learning about you
+	 * @param input
+	 * @return
+	 */
 	private String introduceUser(String input)
 	{
 		String userQuestion = "";
@@ -133,7 +141,11 @@ public class Bot
 		return userQuestion;
 	}
 
-	
+	/**
+	 * Deeper into the conversation. Detecting "how" you type things
+	 * @param input
+	 * @return
+	 */
 	private String randomChatConversation(String input)
 	{
 		String conversation = "";
@@ -244,7 +256,6 @@ public class Bot
 		return isMashing;
 	}
 
-
 	private String userTopic(String userInput)
 	{
 		String userBasedResponse = "";
@@ -263,11 +274,8 @@ public class Bot
 			userBasedResponse = myUser.getAge() + "never expected that age";
 			break;
 		}
-
 		return userBasedResponse;
 	}
-
-	
 	private boolean userInputChecker(String userInput)
 	{
 		boolean matchesInput = false;
@@ -290,7 +298,6 @@ public class Bot
 		chatCount++;
 	}
 
-	
 	private boolean stringLengthChecker(String input)
 	{
 		boolean isTooLong = false;
@@ -303,7 +310,6 @@ public class Bot
 		return isTooLong;
 	}
 
-	
 	private boolean contentChecker(String input)
 	{
 		boolean hasMyContent = false;
@@ -316,7 +322,6 @@ public class Bot
 		return hasMyContent;
 	}
 
-	
 	private boolean memeChecker(String input)
 	{
 		boolean isAMeme = false;
@@ -332,7 +337,11 @@ public class Bot
 		return isAMeme;
 	}
 
-	//what it says when quitting
+	/**
+	 * what it says when quitting
+	 * @param input
+	 * @return
+	 */
 	public boolean quitChecker(String input)
 	{
 		boolean okToQuit = false;
@@ -344,6 +353,4 @@ public class Bot
 
 		return okToQuit;
 	}
-
-
  }

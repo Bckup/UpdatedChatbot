@@ -9,7 +9,7 @@ public class ChatbotFrame extends JFrame
 {
 
 	/**
-	 * 
+	 * Frame (window) 
 	 */
 	private static final long serialVersionUID = 1L;
 	private ChatbotPanel basePanel;
@@ -21,7 +21,9 @@ public class ChatbotFrame extends JFrame
 		setupFrame();
 	}
 	
-	
+	/**
+	 * The size and if visible or not
+	 */
 	private void setupFrame()
 	{
 		this.setContentPane(basePanel);
